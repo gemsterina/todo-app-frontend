@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import InputBox from './components/InputBox';
 
 
 
@@ -8,6 +9,7 @@ class App extends Component {
     return (
       <div className="container">
         <Header />
+        <InputBox />
       </div>
     );
   }
