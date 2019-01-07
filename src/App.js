@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import InputBox from './components/InputBox';
+import TotalCounter from './components/TotalCounter';
 
 
 
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="container">
         <Header />
         <InputBox />
+        <TotalCounter />
       </div>
     );
   }

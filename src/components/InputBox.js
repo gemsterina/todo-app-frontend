@@ -6,7 +6,7 @@ class InputBox extends React.Component {
         return  (
             <div className="row">
                 <div className="col-lg">
-                       <form>
+                       <form style = {styles.formfield}>
                             THINGS TO DO: <input type="text" name="entry" id="formfield" />
                           <button type="button" id="button" className="btn btn-light">Add</button>
                       </form>
@@ -16,6 +16,19 @@ class InputBox extends React.Component {
 
     }
 }
+
+const styles = {
+    formfield: {
+            background: "pink",
+            color: "#DA248E",
+            fontWeight: "bold",
+            fontSize: "30px"
+        },
+    button: {
+        buttonType: "btn btn-light"
+        },
+    }
+
 
 
 export default InputBox;
