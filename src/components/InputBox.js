@@ -8,8 +8,8 @@ class InputBox extends React.Component {
             <div className="row" style={styles.rowHeight}>
                 <div className="col-lg">
                        <form style = {styles.formfield}>
-                            THINGS TO DO: <input type="text" name="entry" id="formfield" />
-                          <button type="button" id="button" className="btn btn-light">Add</button>
+                            THINGS TO DO: <input type="text" name="entry" id="formColor" />
+                          <button type="button" className="btn btn-light" style={styles.buttonLook}>Add</button>
                       </form>
                 </div> 
             </div>
@@ -26,7 +26,13 @@ const styles = {
         },
     rowHeight: {
             margin: "100 0 100 0",
-       }
+       },
+    buttonLook: {
+        
+        backgroundColor: "#F7CED6",
+        color: "white",
+        fontWeight: "bold"
+        },
     }
 
 

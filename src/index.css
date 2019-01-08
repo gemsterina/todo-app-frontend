@@ -24,3 +24,28 @@ code {
 }
 
 
+#task{
+  background: repeating-linear-gradient(
+      45deg,
+      #F7B4E2,
+      #E499CD 10px,
+      #EEE3E5 10px,
+      #EEBFE8 20px
+    );
+  border-radius: 30px;
+  color: #CE266C;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+#formColor {
+  background: repeating-linear-gradient(
+      45deg,
+      #F7B4E2,
+      #E499CD 10px,
+      #EEE3E5 10px,
+      #EEBFE8 20px
+    );
+ 
+}
