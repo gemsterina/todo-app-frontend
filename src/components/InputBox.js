@@ -5,7 +5,7 @@ class InputBox extends React.Component {
 
     render(){
         return  (
-            <div className="row" style={styles.rowHeight}>
+            <div className="rowHeight row">
                 <div className="col-lg">
                        <form style = {styles.formfield}>
                             THINGS TO DO: <input type="text" name="entry" id="formColor" />
@@ -24,9 +24,7 @@ const styles = {
             fontWeight: "bold",
             fontSize: "30px"
         },
-    rowHeight: {
-            margin: "100 0 100 0",
-       },
+   
     buttonLook: {
         
         backgroundColor: "#F7CED6",
