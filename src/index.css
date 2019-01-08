@@ -7,9 +7,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F7CED6;
+  background-position: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+h1 {
+  color: pink;
+  font-weight: bold;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+

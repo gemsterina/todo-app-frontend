@@ -1,10 +1,11 @@
 import React from 'react';
+import '../index.css';
 
 class InputBox extends React.Component {
 
     render(){
         return  (
-            <div className="row">
+            <div className="row" style={styles.rowHeight}>
                 <div className="col-lg">
                        <form style = {styles.formfield}>
                             THINGS TO DO: <input type="text" name="entry" id="formfield" />
@@ -19,16 +20,14 @@ class InputBox extends React.Component {
 
 const styles = {
     formfield: {
-            background: "pink",
             color: "#DA248E",
             fontWeight: "bold",
             fontSize: "30px"
         },
-    button: {
-        buttonType: "btn btn-light"
-        },
+    rowHeight: {
+            margin: "100 0 100 0",
+       }
     }
-
 
 
 export default InputBox;
