@@ -20,7 +20,7 @@ class TaskList extends React.Component {
                 </div>
 
 
-                <div className="row" style={styles.list}>
+                <div className="row" style={styles.taskRow}>
                         <div className="col-sm" id="task">
                             Task 2
                     </div>
