@@ -6,7 +6,7 @@ class TaskList extends React.Component {
     render(){
         return (
             <div>
-                <div className="row" style={styles}>
+                <div className="row" style={styles.taskRow}>
                     <div className="col-sm" id="task">
                         Task 1
                     </div>
@@ -43,14 +43,10 @@ const styles = {
      
 
         
-    list: { 
-            margin: "50 0 50 0"
-        } ,
-
-     rowHeight: {
-             margin: "100 0 100 0",
-           },
-
+    taskRow: {
+        paddingTop: "10px",
+        paddingBottom: "10px"
+    },
     buttonLook: {
             
             backgroundColor: "#F7CED6",
