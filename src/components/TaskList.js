@@ -41,11 +41,6 @@ class TaskList extends React.Component {
 
 const styles = {
      
-
-        
- 
-
-
     taskRow: {
            paddingTop: "50px",
            paddingBottom: "25px"
