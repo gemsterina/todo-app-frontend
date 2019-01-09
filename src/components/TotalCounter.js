@@ -5,7 +5,7 @@ class TotalCounter extends React.Component {
 
     render(){
         return (
-            <div className= "row" style={styles.rowHeight}>
+            <div className= "row" style={styles.taskRow}>
                 <div style={styles.counter} className="col-lg">
      
                  TOTAL TASKS: 2
@@ -27,9 +27,10 @@ const styles = {
 
     },
 
-    rowHeight: {
-        margin: "100 0 100 0",
-   }
+    taskRow: {
+        paddingTop: "50px",
+        paddingBottom: "25px"
+    },
 }
 
 export default TotalCounter;  

@@ -14,8 +14,9 @@ body {
 }
 
 h1 {
-  color: pink;
+  color:#F7CED6;
   font-weight: bold;
+  font-size: 50px;
 }
 
 code {
