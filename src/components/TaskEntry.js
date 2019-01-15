@@ -3,22 +3,33 @@ import '../index.css';
 
 class TaskEntry extends React.Component {
 
-constructor (props){
-    super(props);
+    constructor (props){
+        super(props);
 
-this.state = {
-    taskDescription: ""
-};
+        this.state = {
+            taskDescription: ""
+        };
 
 // Event binding functions
-    this.onSaveClicked = this.onSaveClicked.bind(this);
-    this.onTaskTextFieldUpdated = this.onTaskTextFieldUpdated.bind(this);
+        this.onSaveClicked = this.onSaveClicked.bind(this);
+        this.onTaskTextFieldUpdated = this.onTaskTextFieldUpdated.bind(this);
 
-}
+    }
 
 // Method activates when save button clicked
     onSaveClicked() {
-        alert(this.state.taskDescription);
+
+        const taskToBeAdded={
+            id: (Math.random()*100),
+            description: this.state.taskDescription,
+            completed: false
+        };
+    
+        this.props.onSaveTaskHandler(taskToBeAdded);
+
+        this.setState({
+            taskDescription: ""
+        });
     }
 // Activates when text box is changed
     onTaskTextFieldUpdated(event) {
@@ -30,7 +41,7 @@ this.state = {
     }
 
     render(){
-        return  (
+        return(
             <div className="row">
                 <div className="col-lg">
                        <form style = {styles.formfield}>
@@ -46,18 +57,19 @@ this.state = {
 
 const styles = {
     formfield: {
-            color: "#DA248E",
-            fontWeight: "bold",
-            fontSize: "30px"
-        },
-   
+        color: "#DA248E",
+        fontWeight: "bold",
+        fontSize: "30px"
+    },
+
     buttonLook: {
         
         backgroundColor: "#F7CED6",
         color: "white",
         fontWeight: "bold",
-        },
-    }
+    },
+}
+
 
 
 export default TaskEntry;
