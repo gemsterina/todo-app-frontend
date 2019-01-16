@@ -8,7 +8,7 @@ class Task extends React.Component {
             <div>
                 <div className="row" style={styles.taskRow}>
                     <div className="col-sm" id="task">
-                        {this.props.TaskDescription}
+                        {this.props.taskDescription}
                     </div>
                     <div className="col-sm">
                         <button type="button" className="btn btn-light" style={styles.buttonLook}>Done</button>
