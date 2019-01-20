@@ -18,6 +18,7 @@ class App extends Component {
 
     this.addTask=this.addTask.bind(this);
     this.deleteTask=this.deleteTask.bind(this);
+    this.completeTask=this.completeTask.bind(this);
   }
 
   addTask(task){
@@ -36,8 +37,20 @@ class App extends Component {
     this.setState({ 
       tasks: tasksToKeep
     });
+  }
 
+  completeTask(taskID){
 
+    let currentListOfTasks=this.state.tasks;
+    let modifiedListOfTasks=currentListOfTasks.map((currentTask) => {
+      if(currentTask.id === taskID){
+        currentTask.completed=true;
+      }
+       return currentTask;
+     })
+    this.setState({
+      tasks: modifiedListOfTasks
+    })
   }
 
   render() {
@@ -46,7 +59,7 @@ class App extends Component {
         <Header />
         <TaskEntry onSaveTaskHandler={this.addTask}/>
         <TotalCounter />
-        <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask}/>
+        <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask} completeTask={this.completeTask}/>
       </div>
     );
   }
