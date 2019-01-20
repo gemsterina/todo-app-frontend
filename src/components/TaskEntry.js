@@ -59,7 +59,8 @@ const styles = {
     formfield: {
         color: "#DA248E",
         fontWeight: "bold",
-        fontSize: "30px"
+        fontSize: "30px",
+        textAlign: "center"
     },
 
     buttonLook: {

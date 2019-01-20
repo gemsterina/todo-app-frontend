@@ -8,7 +8,7 @@ class TotalCounter extends React.Component {
             <div className= "row" style={styles.taskRow}>
                 <div style={styles.counter} className="col-lg">
      
-                 TOTAL TASKS: 2
+                 TOTAL TASKS: {this.props.totalTasks}
     
                 </div>
             </div>);

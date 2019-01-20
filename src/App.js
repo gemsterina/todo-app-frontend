@@ -58,7 +58,7 @@ class App extends Component {
       <div className="container">
         <Header />
         <TaskEntry onSaveTaskHandler={this.addTask}/>
-        <TotalCounter />
+        <TotalCounter totalTasks={this.state.tasks.length}/>
         <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask} completeTask={this.completeTask}/>
       </div>
     );

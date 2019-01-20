@@ -35,7 +35,7 @@ code {
     );
   border-radius: 30px;
   color: #CE266C;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 25px;
 }
 
