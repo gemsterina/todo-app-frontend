@@ -3,7 +3,6 @@ import Header from './components/Header';
 import TaskEntry from './components/TaskEntry';
 import TotalCounter from './components/TotalCounter';
 import TaskList from './components/TaskList';
-import Task from './components/Task';
 
 
 
@@ -18,6 +17,7 @@ class App extends Component {
     };
 
     this.addTask=this.addTask.bind(this);
+    this.deleteTask=this.deleteTask.bind(this);
   }
 
   addTask(task){
@@ -29,6 +29,16 @@ class App extends Component {
     });
   }
 
+  deleteTask(taskID){
+
+    let currentListOfTasks=this.state.tasks;
+    let tasksToKeep = currentListOfTasks.filter((currentTask) => currentTask.id !== taskID);
+    this.setState({ 
+      tasks: tasksToKeep
+    });
+
+
+  }
 
   render() {
     return (
@@ -36,8 +46,7 @@ class App extends Component {
         <Header />
         <TaskEntry onSaveTaskHandler={this.addTask}/>
         <TotalCounter />
-        <Task />
-        <TaskList tasks={this.state.tasks} />
+        <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask}/>
       </div>
     );
   }

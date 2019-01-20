@@ -15,7 +15,7 @@ class Task extends React.Component {
                     </div>
     
                     <div className="col-sm">
-                        <button type="button" className="btn btn-light"style={styles.buttonLook}>Delete</button>
+                        <button type="button" className="btn btn-light" style={styles.buttonLook} onClick={this.props.deleteTask.bind(null, this.props.taskID)}>Delete</button>
                     </div>
                 </div>
 

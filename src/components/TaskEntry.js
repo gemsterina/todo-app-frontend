@@ -67,6 +67,7 @@ const styles = {
         backgroundColor: "#F7CED6",
         color: "white",
         fontWeight: "bold",
+        marginLeft: "20px",
     },
 }
 
