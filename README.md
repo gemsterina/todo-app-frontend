@@ -1,5 +1,36 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How the App Works
+
+This is a to do list to keep track of tasks. 
+
+### [App.js](./src/App.js)
+
+* This component tracks the state of the task list using the addTask() and deleteTask() functions. 
+
+* It also holds a completedTask() function to change the true/false status of each individual task.
+
+* The addTask() function is fed down as a prop to TaskEntry.js.
+
+* The deleteTask() and completeTask() functions are fed down as props to TaskList.js.
+
+* A totalTasks prop is fed down to TotalCounter.js to keep track of the number of active tasks.
+
+### [TaskEntry.js](./src/components/TaskEntry.js)
+
+* This uses an onClick event handler to create a new task object as it is added to the text field (via the onTaskTextFieldUpdated() function). 
+
+* It calls the onSaveTaskHandler prop, which pulls down the updated list of tasks which is held in state in App.js and adds the new task. It then sets the new list back in state.
+
+### [TaskList.js](./src/components/TaskList.js)
+
+* TaskList.js maps over the list of tasks (passed down as a prop from App.js) and calls the Task.js component
+ for each task in the list.
+
+### [Task.js](./src/components/Task.js)
+
+* This displays the task description and displays buttons for marking the task complete and for deleting the task.
+
 ## Available Scripts
 
 In the project directory, you can run:
